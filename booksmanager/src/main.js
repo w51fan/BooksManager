@@ -3,6 +3,7 @@ import Vue from 'vue';
 import axios from 'axios';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import ElementUI from 'element-ui';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
 import router from './router';
