@@ -9,7 +9,7 @@
         <el-input v-model="password" placeholder="请输入密码"></el-input>
       </div>
       <div class="footer">
-        <el-button class="item" type="primary">登录</el-button>
+        <el-button class="item" type="primary" @click="loginfun">登录</el-button>
         <el-button class="item">忘记密码</el-button>
       </div>
     </div>
@@ -17,6 +17,11 @@
 </template>
 
 <script>
+import {
+  login,
+  getUserInfo,
+} from '@/api/common';
+
 export default {
   name: 'login',
   // components: {
@@ -26,6 +31,23 @@ export default {
       password: '',
       account: '',
     };
+  },
+  methods: {
+    submit() {
+      console.log('getUserInfo');
+      getUserInfo().then((res) => {
+        console.log('getUserInfo', res);
+      }).catch();
+    },
+    loginfun() {
+      console.log('login');
+      login().then((res) => {
+        console.log('login', res);
+        this.$router.push({
+          name: 'Home',
+        });
+      }).catch();
+    },
   },
 };
 </script>

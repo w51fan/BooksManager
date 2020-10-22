@@ -17,9 +17,9 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json()); //data参数以字典格式传输
 
-app.post('/register', (req, res) => {
-  console.log(req.body); // 打印一个对象 ，例如:{name:'zs',age:'12'}
-  res.send(req.body); // 不能发送数字，只能发字符串
+app.post('/login', (req, res) => {
+  console.log('登录成功！'); // 打印一个对象 ，例如:{name:'zs',age:'12'}
+  res.send('登录成功！'); // 不能发送数字，只能发字符串
 });
 
 

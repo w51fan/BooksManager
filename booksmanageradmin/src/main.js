@@ -9,8 +9,14 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
+axios.baseURL = process.env.VUE_APP_URL;
+console.log(process.env.VUE_APP_URL);
+
 Vue.config.productionTip = false;
 Vue.prototype.$axios = axios;
+
+axios.baseURL = process.env.VUE_APP_URL;
+
 Vue.use(ElementUI);
 new Vue({
   router,
